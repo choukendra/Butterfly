@@ -2,16 +2,21 @@
 //based on https://www.youtube.com/watch?v=O_0fRV4MTZo
 
 float x, y, a, r, xoff, yoff, n, da, dx;
+float red, green, blue;
 
 void setup() {
   size(200, 200);
+  red = random(0, 255);
+  green = random(0, 255);
+  blue = random(0, 255);
 }
 
 void draw() {
   background(80);
   translate(width/2, height/2);
   stroke(255);
-  fill(#553030, 100);
+  fill(red, green, blue, 100);
+  //fill(#553030, 100);
   strokeWeight(1);
 
   rotate(PI/2);
@@ -57,6 +62,9 @@ void draw() {
 }
 
 void mouseReleased() {
+  red = random(0, 255);
+  green = random(0, 255);
+  blue = random(0, 255);
   yoff += 0.5;
   xoff += 0.5;
 }
